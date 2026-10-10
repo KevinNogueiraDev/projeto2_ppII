@@ -1,0 +1,78 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+int main()
+{
+    
+    char telefone[40];
+    char cpf[20];
+    char nome[40];
+    char cidade[50];
+    
+    float sal, vt, va, total;
+    
+    printf("=============CADASTRO===============\n");
+    printf("Digite seu telefone: ");
+    fgets(telefone, 40, stdin);
+    telefone[strcspn(telefone, "\n")] = '\0';
+    
+    printf("Digite seu CPF: ");
+    fgets(cpf, 20, stdin);
+    cpf[strcspn(cpf, "\n")] = '\0';
+    
+    printf("Digite seu nome: ");
+    fgets(nome, 40, stdin);
+    nome[strcspn(nome, "\n")] = '\0';
+    
+    printf("Digite o nome da cidade: ");
+    fgets(cidade, 50, stdin);
+    cidade[strcspn(cidade, "\n")] = '\0';
+    
+    system("clear");
+    
+    printf("======INFORMAÇÕES CADASTRADAS=======\n");
+    printf("Telefone: %s\n", telefone);
+    printf("CPF: %s\n", cpf);
+    printf("Nome: %s\n", nome);
+    printf("Cidade: %s\n", cidade);
+    
+    printf("Aperte enter para continuar!");
+    getchar();
+    
+    system("clear");
+    
+    printf("========CADASTRO FINANCEIRO==========\n");
+    printf("Digite o salário: ");
+    scanf("%f", &sal);
+    
+    printf("Digite o valor do vale transporte: ");
+    scanf("%f", &vt);
+    
+    printf("Digite o valor do vale alimentação: ");
+    scanf("%f", &va);
+    
+    total = sal + vt + va;
+    
+    if (total < 1600) {
+        printf("Bônus \n");
+    }
+    
+    system("clear");
+    
+    printf("======INFORMAÇÕES CADASTRADAS=======\n");
+    printf("Telefone: %s\n", telefone);
+    printf("CPF: %s\n", cpf);
+    printf("Nome: %s\n", nome);
+    printf("Cidade: %s\n", cidade);
+    printf("Salário base: %.2f\n", sal);
+    printf("Vale transporte: %.2f\n", vt);
+    printf("Vale alimentação: %.2f\n", va);
+    
+    printf("Tecle enter para continuar: ");
+    getchar();
+    
+    system("clear");
+    
+    return 0;
+}
